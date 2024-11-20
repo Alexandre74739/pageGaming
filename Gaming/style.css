@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=DM+Serif+Display:ital@0;1&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Noto+Sans+HK:wght@100..900&family=Oxanium:wght@200..800&family=Pacifico&display=swap');
+body {
+    background-image: url('images/banniere.jpg');
+    scroll-behavior: smooth;
+    margin-top: 0;
+    padding: 0 0.5%;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    background-color: rgba(36,38,45,255);
+    font-family: "Oxanium", sans-serif;
+    color: aliceblue;
+    font-weight: 700;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+.logo span {
+    color: rgb(215, 100, 25);
+}
+
+header nav {
+    margin-right: 5%;
+    position: relative;
+}
+
+header nav button {
+    display: none;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0 10px;
+    padding: 2.5% 2%;
+    cursor: pointer;
+    transition: 0.5s;
+    transform: skew(-18deg);
+}
+
+.menu li:hover {
+    background-color: rgb(215, 100, 25);
+}
+
+.menu li a {
+    position: relative;
+    font-size: 24px;
+    text-decoration: none;
+    font-family: "Oxanium", sans-serif;
+    color: aliceblue;
+}
+
+    /* Home */
+
+.home {
+    background-image: url('images/fond1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 1%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: aliceblue;
+    font-family: "Oxanium", sans-serif;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: -10%;
+}
+
+.right h4 {
+    font-size: 30px;
+    margin-bottom: -2%;
+    font-weight: 900;
+}
+
+.right h1 {
+    font-size: 44px;
+    background-image: linear-gradient(45deg, #ff9800, #ffb74d, #ff6f00, #ff8f00, #ff5722);
+    background-size: 300%; /* Agrandit le dégradé pour un effet de transition fluide */
+    background-clip: text;
+    color: transparent; /* Masque la couleur pour révéler le dégradé */
+    animation: gradient-shift 5s infinite alternate; /* Anime le changement de couleur */
+    position: relative;
+    padding: 20px 0;
+    font-weight: 900;
+}
+
+/* Bordures dégradées en haut et en bas */
+.right h1::before,
+.right h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Épaisseur de la bordure */
+    background-image: linear-gradient(45deg, #ff9800, #ffb74d, #ff6f00, #ff8f00, #f84610);
+    background-size: 300%;
+    animation: gradient-shift 8s infinite alternate;
+}
+
+.right h1::before {
+    top: 0; /* Bordure en haut */
+}
+
+.right h1::after {
+    bottom: 0; /* Bordure en bas */
+}
+
+/* Animation de changement de dégradé */
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.right p {
+    padding: 10px;
+    margin-top: -2%;
+    max-width: 45%;
+    word-wrap: break-word;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.right button {
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: 0;
+    background-image: linear-gradient(45deg, #ff9800, #ffb74d, #ff6f00, #ff8f00, #f84610);
+    background-size: 300%;
+    animation: gradient-shift 8s infinite alternate;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.right button:hover {
+    transform: scale(1.1, 1.1)
+}
+
+.right button a {
+    text-decoration: none;
+    font-family: "Oxanium", sans-serif;
+    color: aliceblue;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+    /* Other */
+
+.other {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+}
+
+.other h2 {
+    font-family: "Oxanium", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.other .icons-borders {
+    margin: 0 10%;
+}
+
+.other h2 span {
+    color: rgb(215, 100, 25);
+}
+
+.other .icons {
+    display: flex;
+    justify-content: center;
+    background-image: url('images/banniere.jpg');
+    background-size: cover;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.other .console {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.other .console img {
+    width: 75px;
+    height: 75px;
+    margin-right: 8%;
+}
+
+.other .console div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: "Oxanium", sans-serif;
+    color: aliceblue;
+}
+
+.other .console h4 {
+    font-size: 20px;
+    font-weight: 900;
+    background: linear-gradient(45deg, #ff9800, #ffb74d, #ff6f00, #ff8f00, #f84610);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: aliceblue;
+    animation: gradient-shift 8s infinite alternate;
+    cursor: pointer;
+    transition: transform 0.5s ease, background-size 0.5s ease;
+    position: relative;
+    margin-bottom: 0;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.other .console h4:hover {
+    transform: scale(1.15);
+}
+
+.other .console h4::after {
+    content: ""; /* Permet d'ajouter une ligne sous le texte */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Positionnement de la ligne */
+    width: 0; /* Initialement invisible */
+    height: 2px; /* Épaisseur de la ligne */
+    background: linear-gradient(45deg, #ff9800, #ffb74d, #ff6f00, #ff8f00, #f84610);
+    transition: width 0.5s ease; /* Transition pour l'animation de la largeur */
+}
+
+.other .console h4:hover::after {
+    width: 100%; /* La ligne devient visible */
+}
+
+.other .console p {
+    font-weight: bold;
+}
+
+
+
+
+
+    /* Media Queries pour différentes tailles d'écran */
+
+
+
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    header nav .menu {
+        display: none; 
+    }
+    
+    header nav button {
+        display: block;
+        padding: 0 10px;
+        border-radius: 0;
+        border: 0;
+        color: aliceblue;
+        background-color: rgb(0,0,0,0);
+        font-weight: 900;
+        font-size: 30px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    header nav button:hover {
+        transform: scale(1.15);
+        color: rgb(215, 100, 25); 
+    }
+
+    .home {
+        height: 50vh;
+    }
+
+    .right {
+        margin-right: 0;
+        margin-top: -5%;
+        transform: scale(0.6);    
+    }
+    
+    .right h4 {
+        font-size: 20px;
+    }
+
+    .right h1 {
+        font-size: 30px;
+    }
+
+    .right p {
+        font-size: 18px;
+    }
+
+    .other h2 {
+        font-size: 18px;
+    }
+
+    .other .icons {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-image: none;
+        margin-top: -15%;
+        transform: scale(0.85);
+    }
+
+    .other .console {
+        background-image: url('images/banniere.jpg');
+        background-size: cover;
+        padding: 8%;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+}
